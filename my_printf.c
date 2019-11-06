@@ -29,8 +29,3 @@ int my_printf(char const * format, ...)
     }
     return (0);
 }
-
-int main()
-{
-    my_printf("Begin %u End lol \n", 4000000000);
-}
