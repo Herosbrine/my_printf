@@ -30,7 +30,8 @@ int my_printf(char const * format, ...)
     return (0);
 }
 
-void main()
+int main()
 {
-    my_printf(format, ...);
+    my_printf("gregoire  %o ans", 218);
+    return (0);
 }

@@ -37,3 +37,6 @@ int my_getnbr(char *str);
 int my_putstr(char const *str);
 char *my_revstr(char *str);
 int my_put_nbr2(unsigned int nbr);
+
+//octal
+int my_put_octal(int nbr);

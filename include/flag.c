@@ -22,8 +22,10 @@ int my_flag(int i, va_list paramsinfos, char const * format, ...)
     if (format[i] == 'd')
         my_put_nbr(va_arg(paramsinfos, int));
     if (format[i] == 'i')
-        my_put_nbr(va_arg(paramsinfos, int));   
+        my_put_nbr(va_arg(paramsinfos, int));
     if (format[i] == 'u')
         my_put_nbr2(va_arg(paramsinfos, unsigned int));
+    if (format[i] == 'o')
+        my_put_octal(va_arg(paramsinfos, int));
     return (0);
 }

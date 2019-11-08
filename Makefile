@@ -5,7 +5,7 @@
 ## Makefile
 ##
 
-CC	=	gcc -c
+CC	=	gcc -g3 -c
 
 RM	=	 rm -rf
 
@@ -23,6 +23,7 @@ SRCS =	include/flag.c				\
 		lib/my/my_revstr.c			\
 		lib/my/my_put_nbr.c			\
 		lib/my/my_put_nbr2.c		\
+		lib/my/my_put_octal.c		\
 		my_printf.c 				\
 
 
