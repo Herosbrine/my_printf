@@ -4,7 +4,6 @@
 ** File description:
 ** my_printf.c
 */
-
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,6 +31,6 @@ int my_printf(char const * format, ...)
 
 int main()
 {
-    my_printf(format, ...);
+    my_printf("gregoire a %x ans", 25);
     return (0);
 }

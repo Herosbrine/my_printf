@@ -24,6 +24,7 @@ SRCS =	include/flag.c				\
 		lib/my/my_put_nbr.c			\
 		lib/my/my_put_nbr2.c		\
 		lib/my/my_put_octal.c		\
+		lib/my/my_put_hexa.c		\
 		my_printf.c 				\
 
 
