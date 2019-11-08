@@ -41,3 +41,4 @@ int my_put_nbr2(unsigned int nbr);
 //octal
 int my_put_octal(unsigned nbr);
 int my_put_hexa(unsigned nbr);
+int my_put_space(int i, char const *format);

@@ -19,9 +19,7 @@ int my_flag(int i, va_list paramsinfos, char const * format, ...)
         for (int j = 0; str[j]; j++)
             my_putchar(str[j]);
     }
-    if (format[i] == 'd')
-        my_put_nbr(va_arg(paramsinfos, int));
-    if (format[i] == 'i')
+    if (format[i] == 'd' || format[i] == 'i')
         my_put_nbr(va_arg(paramsinfos, int));
     if (format[i] == 'u')
         my_put_nbr2(va_arg(paramsinfos, unsigned int));

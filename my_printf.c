@@ -16,10 +16,18 @@ int my_printf(char const * format, ...)
 {
     va_list(paramsinfos);
     va_start(paramsinfos, format);
-
+    
     for (int i = 0; format[i] != '\0'; i++) {
         if (format[i] == '%') {
             i++;
+            while (format[i] >= '0' && format[i] <= '9') {
+                my_put_space(i, format);
+                i++;
+            }
+            while (format[i] == ' ') {
+                my_putchar(' ');
+                i++;
+            }
             my_flag(i, paramsinfos, format);
         }
         else {
@@ -31,6 +39,6 @@ int my_printf(char const * format, ...)
 
 int main()
 {
-    my_printf("gregoire a %x ans", 25);
+    my_printf("gregoire a %21d ans", 123);
     return (0);
 }
