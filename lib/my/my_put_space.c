@@ -11,8 +11,10 @@ int my_put_space(int i, char const *format)
     int x = 0;
     int n = 0;
 
-    if (format[i] <= 9 || format[i] >= 0) {
+    while (format[i] <= '9' && format[i] >= '0') {
+        n = n * 10;
         n = n + format[i] - 48;
+        i++;
     }
     while (n != x) {
         my_putchar(' ');
