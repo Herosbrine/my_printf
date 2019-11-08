@@ -6,10 +6,10 @@
 */
 #include "../../include/my.h"
 
-int my_put_octal(int nbr)
+int my_put_octal(unsigned nbr)
 {
-    long octalnbr = 0, i = 1;
-    int remainder;
+    unsigned octalnbr = 0, i = 1;
+    unsigned remainder;
 
     while (nbr != 0) {
         remainder = nbr % 8;

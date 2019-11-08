@@ -32,6 +32,6 @@ int my_printf(char const * format, ...)
 
 int main()
 {
-    my_printf("gregoire  %o ans", 218);
+    my_printf(format, ...);
     return (0);
 }
