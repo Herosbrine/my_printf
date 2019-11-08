@@ -36,9 +36,3 @@ int my_printf(char const * format, ...)
     }
     return (0);
 }
-
-int main()
-{
-    my_printf("gregoire a %21d ans", 123);
-    return (0);
-}
