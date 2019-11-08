@@ -5,21 +5,20 @@
 ## Makefile
 ##
 
-SRC 	=		my_putchar.c \
-				my_putstr.c \
-				my_put_nbr.c \
-				my_revstr.c \
-				my_strlen.c \
+SRC =	my_putchar.c \
+		my_putstr.c \
+		my_put_nbr.c \
+		my_revstr.c \
+		my_strlen.c \
 
-OBJ		=		$(SRC:.c=.o)
+OBJ	=	$(SRC:.c=.o)
 
-NAME 	= 		libmy.a
+NAME = 	libmy.a
 
-all: 	$(NAME)
+all: $(NAME)
 
 $(NAME):	$(OBJ)
 	ar rc $(NAME) $(OBJ)
-
 
 clean:
 	rm -f *.o
@@ -27,4 +26,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re:		fclean all
+re:	fclean all

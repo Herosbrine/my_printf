@@ -9,28 +9,23 @@
 #include <stdlib.h>
 #include "../../include/my.h"
 
-int my_getnbr(const char *str)
+int	my_getnbr(char *str)
 {
     int i = 0;
-    long nb = 0;
-    int neg = 0;
-    
-    if (str[i] == 0)
-        return (0);
-    if (str[i] == '-') {
-        neg = 1;
+    int n = 0;
+
+    if (str[0] == '-' && str[1] != '\0')
+        i++;
+    while (str[i] != '\0') {
+        if ((str[i] < '0' || str[i] > '9'))
+	        write(1, "There must be only numbers in the string", 40);
+        n = n + str[i] - 48;
+        n = n * 10;
         i++;
     }
-    if (nb > 2147483647 || nb < -2147483647) {
-        return (0);
-    }
-    for (; str[i] != '\0'; i++) {
-        if (str[i] > '9' || str[i] < '0') {
-            if (neg == 1)
-                nb = -nb;
-            return (nb);
-        }
-        nb = nb * 10 + (str[i]) - 48;
-    }
-    return (nb);
+    n /= 10;
+    if (str[0] == '-')
+        return (-1 * n);
+    else
+        return (n);
 }

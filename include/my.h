@@ -33,7 +33,7 @@ char *infin_add(char *nb1, char *nb2);
 int my_strlen(char const *str);
 int my_put_nbr(int nbr);
 void my_putchar(char c);
-int my_getnbr(const char *str);
+int my_getnbr(char *str);
 int my_putstr(char const *str);
 char *my_revstr(char *str);
 int my_put_nbr2(unsigned int nbr);

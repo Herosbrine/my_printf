@@ -1,4 +1,11 @@
-CC	=	gcc -g3 -c
+##
+## EPITECH PROJECT, 2019
+## undefined
+## File description:
+## Makefile
+##
+
+CC	=	gcc -c
 
 RM	=	 rm -rf
 

@@ -11,8 +11,8 @@
 #include <string.h>
 #include "include/my.h"
 #include "include/my.h"
-int my_flag(int i, va_list paramsinfos, char const * format, ...);
 
+int my_flag(int i, va_list paramsinfos, char const * format, ...);
 int my_printf(char const * format, ...)
 {
     va_list(paramsinfos);
@@ -30,7 +30,7 @@ int my_printf(char const * format, ...)
     return (0);
 }
 
-int main()
+void main()
 {
-    my_printf("Begin %u End lol \n", 4000000000);
+    my_printf(format, ...);
 }
