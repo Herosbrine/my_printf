@@ -36,8 +36,18 @@ all: $(NAME)
 $(NAME):	$(OBJ)
 	ar rc $(NAME) $(OBJ)
 
+tests run:
+	$(MAKE)
+	gcc -o unit_test lib/my/my_printf.c tests/test_myprintf.c libmy.a --coverage -lcriterion
+	./unit_test
+	gcov test_myprintf.gcda
+#	gcovr --exclude "test_*"
+	$(MAKE) fclean
+
 clean:
 	rm -f *.o
+	rm -f *.g*
+	rm -f unit_test
 
 fclean: clean
 	rm -f $(NAME)
