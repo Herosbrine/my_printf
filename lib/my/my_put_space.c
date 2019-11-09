@@ -4,7 +4,7 @@
 ** File description:
 ** my_put_space.c
 */
-#include "../../include/my.h"
+#include "my.h"
 
 int my_put_space(int i, char const *format)
 {

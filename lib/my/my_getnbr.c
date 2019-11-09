@@ -8,7 +8,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "../../include/my.h"
+#include "my.h"
 
 int	my_getnbr(char *str)
 {

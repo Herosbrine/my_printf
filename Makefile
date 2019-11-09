@@ -1,46 +1,44 @@
 ##
 ## EPITECH PROJECT, 2019
-## undefined
+## Makefile
 ## File description:
 ## Makefile
 ##
 
-CC	=	gcc -g3 -c
+CC	=	gcc -c
 
 RM	=	 rm -rf
 
-NAME =	 a.out
+CFLAGS = -W -Wall -Wextra
 
-CFLAGS = -W -Wall -Wextra -I./include
+SRC_DIR = ./lib/my/
 
-SRC_DIR = ./PSU_my_printf_2019
+SRC =	$(SRC_DIR)my_putchar.c 	\
+		$(SRC_DIR)my_putstr.c 	\
+		$(SRC_DIR)my_put_nbr.c 	\
+		$(SRC_DIR)my_revstr.c 	\
+		$(SRC_DIR)my_strlen.c 	\
+		$(SRC_DIR)my_printf.c 	\
+		$(SRC_DIR)flag.c		\
+		$(SRC_DIR)my_getnbr.c 	\
+		$(SRC_DIR)my_put_hexa.c \
+		$(SRC_DIR)my_put_octal.c \
+		$(SRC_DIR)my_put_nbr2.c  \
+		$(SRC_DIR)my_put_space.c
 
-SRCS =	include/flag.c				\
-		lib/my/my_putchar.c			\
-		lib/my/my_getnbr.c			\
-		lib/my/my_putstr.c			\
-		lib/my/my_strlen.c			\
-		lib/my/my_revstr.c			\
-		lib/my/my_put_nbr.c			\
-		lib/my/my_put_nbr2.c		\
-		lib/my/my_put_octal.c		\
-		lib/my/my_put_hexa.c		\
-		lib/my/my_put_space.c		\
-		my_printf.c 				\
+OBJ	=	$(SRC:.c=.o)
 
+NAME = 	libmy.a
 
-OBJS =	 $(SRCS:.c=.o)
+all: $(NAME)
 
-all :	 $(NAME)
-
-$(NAME):	$(OBJS)
-		gcc $(OBJS) -o $(NAME)
+$(NAME):	$(OBJ)
+	ar rc $(NAME) $(OBJ)
 
 clean:
-	$(RM) $(OBJS)
+	rm -f *.o
 
-fclean : clean
-	$(RM) $(NAME)
+fclean: clean
+	rm -f $(NAME)
 
-
-re : fclean all
+re:	fclean all

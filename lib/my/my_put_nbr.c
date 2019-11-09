@@ -5,7 +5,7 @@
 ** my_put_nbr.c
 */
 
-#include "../../include/my.h"
+#include "my.h"
 
 int my_put_nbr(int nbr)
 {
@@ -19,5 +19,5 @@ int my_put_nbr(int nbr)
     } else {
         my_putchar(nbr + '0');
     }
-    return(0);
+    return (0);
 }

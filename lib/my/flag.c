@@ -14,7 +14,7 @@ int my_flag(int i, va_list paramsinfos, char const * format, ...)
         for (int j = 0; string[j] != '\0'; j++)
             my_putchar(string[j]);
     }
-    if (format[i] == 'c') { 
+    if (format[i] == 'c') {
         const char *str = (const char *)va_arg(paramsinfos, const char *);
         for (int j = 0; str[j]; j++)
             my_putchar(str[j]);

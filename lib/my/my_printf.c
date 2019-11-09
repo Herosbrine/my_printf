@@ -4,14 +4,13 @@
 ** File description:
 ** my_printf.c
 */
+
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "include/my.h"
-#include "include/my.h"
+#include "my.h"
 
-int my_flag(int i, va_list paramsinfos, char const * format, ...);
 int my_printf(char const * format, ...)
 {
     va_list(paramsinfos);
