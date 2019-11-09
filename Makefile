@@ -24,7 +24,8 @@ SRC =	$(SRC_DIR)my_putchar.c 	\
 		$(SRC_DIR)my_put_hexa.c \
 		$(SRC_DIR)my_put_octal.c \
 		$(SRC_DIR)my_put_nbr2.c  \
-		$(SRC_DIR)my_put_space.c
+		$(SRC_DIR)my_put_space.c \
+		$(SRC_DIR)my_printf2.c
 
 OBJ	=	$(SRC:.c=.o)
 

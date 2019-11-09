@@ -48,5 +48,6 @@ int my_put_hexa(unsigned nbr);
 int my_put_space(int i, char const *format);
 int my_flag(int i, va_list paramsinfos, char const * format, ...);
 int my_printf(char const * format, ...);
+int my_printf2(int i, char const * format, ...);
 
 #endif

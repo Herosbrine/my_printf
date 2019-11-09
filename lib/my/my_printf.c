@@ -19,24 +19,7 @@ int my_printf(char const * format, ...)
     for (int i = 0; format[i] != '\0'; i++) {
         if (format[i] == '%') {
             i++;
-            while (format[i] == '%') {
-                i++;
-                if (format[i] != '%')
-                    my_putchar('%');
-                while (format[i] != '\0') {
-                    my_putchar(format[i]);
-                    i++;
-                }
-                exit( EXIT_SUCCESS );
-            }
-            while (format[i] >= '0' && format[i] <= '9') {
-                my_put_space(i, format);
-                i++;
-            }
-            while (format[i] == ' ') {
-                my_putchar(' ');
-                i++;
-            }
+            my_printf2(i, format);
             my_flag(i, paramsinfos, format);
         }
         else {
