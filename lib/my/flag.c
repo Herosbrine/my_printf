@@ -26,7 +26,7 @@ int my_flag(int i, va_list paramsinfos, char const * format, ...)
         my_put_nbr2(va_arg(paramsinfos, unsigned int));
     if (format[i] == 'o')
         my_put_octal(va_arg(paramsinfos, unsigned int));
-    if (format[i] == 'x')
+    if (format[i] == 'X')
         my_put_hexa(va_arg(paramsinfos, unsigned int));
     return (0);
 }

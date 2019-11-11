@@ -14,7 +14,6 @@
 int my_printf2(int i, char const * format, ...)
 {
     while (format[i] == '%') {
-        i++;
         if (format[i] != '%')
             my_putchar('%');
         while (format[i] != '\0') {
