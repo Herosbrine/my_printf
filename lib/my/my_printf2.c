@@ -32,4 +32,5 @@ int my_printf2(int i, va_list paramsinfos, char const * format, ...)
         i++;
     }
     my_flag(i, paramsinfos, format);
+    return (0);
 }
