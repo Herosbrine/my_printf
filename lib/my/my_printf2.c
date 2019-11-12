@@ -15,7 +15,8 @@ int my_printf2(int i, va_list paramsinfos, char const * format, ...)
 {
     while (format[i] == ' ') {
         i++;
-        my_putchar('.');
+        if (format[i] != ' ')
+            my_putchar(' ');
     }
     while (format[i] == '%') {
         if (format[i] != '%')
