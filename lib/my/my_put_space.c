@@ -16,7 +16,7 @@ int my_put_space(int i, char const *format)
         n = n + format[i] - 48;
         i++;
     }
-    while (n != x) {
+    while (n - 1 != x) {
         my_putchar(' ');
         x++;
     }

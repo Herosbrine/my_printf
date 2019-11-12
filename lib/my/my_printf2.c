@@ -11,8 +11,12 @@
 #include <string.h>
 #include "my.h"
 
-int my_printf2(int i, char const * format, ...)
+int my_printf2(int i, va_list paramsinfos, char const * format, ...)
 {
+    while (format[i] == ' ') {
+        i++;
+        my_putchar('.');
+    }
     while (format[i] == '%') {
         if (format[i] != '%')
             my_putchar('%');
@@ -26,9 +30,5 @@ int my_printf2(int i, char const * format, ...)
         my_put_space(i, format);
         i++;
     }
-    while (format[i] == ' ') {
-        my_putchar(' ');
-        i++;
-    }
-    return (0);
+    my_flag(i, paramsinfos, format);
 }

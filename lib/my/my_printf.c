@@ -19,8 +19,8 @@ int my_printf(char const * format, ...)
     for (int i = 0; format[i] != '\0'; i++) {
         if (format[i] == '%') {
             i++;
-            my_printf2(i, format);
-            my_flag(i, paramsinfos, format);
+            my_printf2(i, paramsinfos, format);
+            exit( EXIT_SUCCESS );
         }
         else {
             my_putchar(format[i]);
