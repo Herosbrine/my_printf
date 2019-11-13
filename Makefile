@@ -21,11 +21,13 @@ SRC =	$(SRC_DIR)my_putchar.c 	\
 		$(SRC_DIR)my_printf.c 	\
 		$(SRC_DIR)flag.c		\
 		$(SRC_DIR)my_getnbr.c 	\
-		$(SRC_DIR)my_put_hexa.c \
+		$(SRC_DIR)my_put_hexa_max.c \
 		$(SRC_DIR)my_put_octal.c \
 		$(SRC_DIR)my_put_nbr2.c  \
 		$(SRC_DIR)my_put_space.c \
-		$(SRC_DIR)my_printf2.c
+		$(SRC_DIR)my_printf2.c	 \
+		$(SRC_DIR)my_put_hexa_min.c \
+		$(SRC_DIR)my_put_binary.c
 
 OBJ	=	$(SRC:.c=.o)
 

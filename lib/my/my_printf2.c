@@ -15,7 +15,7 @@ int my_printf2(int *i, va_list paramsinfos, char const * format, ...)
 {
     while (format[*i] == ' ') {
         (*i)++;
-        if (format[*i] != ' ')
+        if ((format[*i] != ' ' && format[*i] == 'd') || format[*i] == 'i')
             my_putchar(' ');
     }
     while (format[*i] == '%') {
@@ -29,7 +29,7 @@ int my_printf2(int *i, va_list paramsinfos, char const * format, ...)
     }
     while (format[*i] >= '0' && format[*i] <= '9') {
         my_put_space(*i, format);
-        *i++;
+        (*i)++;
     }
     my_flag(*i, paramsinfos, format);
     return (0);
