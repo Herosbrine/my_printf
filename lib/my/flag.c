@@ -10,16 +10,10 @@
 
 int my_flag(int i, va_list paramsinfos, char const * format, ...)
 {
-    if (format[i] == 's') {
-        const char * string = (const char *)va_arg(paramsinfos, const char *);
-        for (int j = 0; string[j] != '\0'; j++)
-            my_putchar(string[j]);
-    }
-    if (format[i] == 'c') {
-        const char *str = (const char *)va_arg(paramsinfos, const char *);
-        for (int j = 0; str[j]; j++)
-            my_putchar(str[j]);
-    }
+    if (format[i] == 's')
+        my_putstr(va_arg(paramsinfos, const char *));
+    if (format[i] == 'c')
+        my_putchar(va_arg(paramsinfos, int));
     if (format[i] == 'd' || format[i] == 'i')
         my_put_nbr(va_arg(paramsinfos, int));
     if (format[i] == 'u')
