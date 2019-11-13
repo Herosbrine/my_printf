@@ -19,7 +19,7 @@ int my_put_binary(unsigned int nbr)
     while (nbr > 0) {
         binaryNum[i] = nbr % 2;
         nbr = nbr / 2;
-        i++; 
+        i++;
     }
     for (int j = i - 1; j >= 0; j--)
         my_putchar(binaryNum[j] + 48);
