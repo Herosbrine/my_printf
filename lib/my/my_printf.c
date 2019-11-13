@@ -20,7 +20,6 @@ int my_printf(char const * format, ...)
         if (format[i] == '%') {
             i++;
             my_printf2(i, paramsinfos, format);
-            exit( EXIT_SUCCESS );
         }
         else {
             my_putchar(format[i]);
