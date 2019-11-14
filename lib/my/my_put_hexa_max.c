@@ -25,5 +25,5 @@ int my_put_hexa(unsigned nbr)
     }
     for (j = i -1; j> 0; j--)
         my_putchar(hexadecimalNumber[j]);
-    return 0;
+    return (0);
 }
