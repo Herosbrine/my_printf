@@ -47,7 +47,7 @@ tests run:
 	$(MAKE) fclean
 
 clean:
-	rm -f *.o
+	rm -f $(OBJ)
 	rm -f *.g*
 	rm -f unit_test
 

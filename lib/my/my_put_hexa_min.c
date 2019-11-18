@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-int my_put_hexa_Min(unsigned nbr)
+int my_put_hexa_min(unsigned nbr)
 {
     long quotient = 0;
     int i = 1, j, temp;
