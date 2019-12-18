@@ -23,7 +23,7 @@ int my_flag(int i, va_list paramsinfos, char const * format, ...)
     if (format[i] == 'X')
         my_put_hexa(va_arg(paramsinfos, unsigned int));
     if (format[i] == 'x')
-        my_put_hexa_Min(va_arg(paramsinfos, unsigned int));
+        my_put_hexa_min(va_arg(paramsinfos, unsigned int));
     if (format[i] == 'b')
         my_put_binary(va_arg(paramsinfos, unsigned int));
     return (0);

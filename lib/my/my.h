@@ -49,7 +49,7 @@ int my_put_space(int i, char const *format);
 int my_flag(int i, va_list paramsinfos, char const * format, ...);
 int my_printf(char const * format, ...);
 int my_printf2(int *i, va_list paramsinfos, char const * format, ...);
-int my_put_hexa_Min(unsigned nbr);
+int my_put_hexa_min(unsigned nbr);
 int my_put_binary(unsigned int nbr);
 
 #endif
